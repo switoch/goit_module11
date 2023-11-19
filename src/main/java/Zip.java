@@ -17,9 +17,8 @@ public class Zip {
     }
 
 
-    // CopyPast from StackOverflow (https://stackoverflow.com/questions/17640754/zipping-streams-using-jdk8-with-lambda-java-util-stream-streams-zip).
-    // It doesn't work if the first stream is smaller than second
-    public static<T> Stream<T> lazyZip(Stream<? extends T> a,
+    // Copied from StackOverflow (https://stackoverflow.com/questions/17640754/zipping-streams-using-jdk8-with-lambda-java-util-stream-streams-zip).
+      public static<T> Stream<T> lazyZip(Stream<? extends T> a,
                                          Stream<? extends T> b) {
         Spliterator<? extends T> aSpliterator = a.spliterator();
         Spliterator<? extends T> bSpliterator = b.spliterator();
