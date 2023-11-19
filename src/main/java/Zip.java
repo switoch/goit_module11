@@ -39,7 +39,7 @@ public class Zip {
             boolean flag = true;
             @Override
             public boolean hasNext() {
-                return aIterator.hasNext() && bIterator.hasNext();
+                return aIterator.hasNext() && bIterator.hasNext() || !aIterator.hasNext() && bIterator.hasNext() && !flag;
             }
 
             @Override
